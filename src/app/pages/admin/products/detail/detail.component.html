@@ -1,0 +1,57 @@
+<!-- <div class="product_image_area">
+    <div class="container">
+      <div class="row s_product_inner">
+        <div class="col-lg-6">
+          <div class="s_product_img">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    class="d-block w-100"
+                    src="img/product/single-product/s-product-1.jpg"
+                    alt="First slide"
+                  />
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="s_product_text">
+            <h3>Faded SkyBlu Denim Jeans</h3>
+            <h2>$149.99</h2>
+            <p>
+              Mill Oil is an innovative oil filled radiator with the most
+              modern technology. If you are looking for something that can
+              make your interior look awesome, and at the same time give you
+              the pleasant warm feeling during the winter.
+            </p>
+            
+               
+            </div>
+            <div class="card_area">
+              <a class="main_btn" href="#">Add to Cart</a>
+              <a class="icon_btn" href="#">
+                <i class="lnr lnr lnr-diamond"></i>
+              </a>
+              <a class="icon_btn" href="#">
+                <i class="lnr lnr lnr-heart"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   -->
+
+   <h2>Product Detail</h2>
+@if (product) {
+<img [src]="product.image" width="100px" />
+}
+<h1 *ngIf="product">{{ product.title }}</h1>

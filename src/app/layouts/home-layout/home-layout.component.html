@@ -1,0 +1,25 @@
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" *ngFor="let product of products">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top"
+                         width="100%"
+                         height="225"
+                         [src]="product.image"
+                         alt="{{product.title}}"
+                    />
+                    <div class="card-body">
+                        <h2 class="card-title">{{product.title}}</h2>
+                        <p class="card-text">{{product.description}}</p>
+                        <p class="card-text">{{product.price}}$</p>
+                        
+                        <div class="text-center">
+                            <button class="w-50 btn btn-primary" [routerLink]="['/admin/products', product.id]">view</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

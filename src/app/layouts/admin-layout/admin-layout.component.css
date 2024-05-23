@@ -1,0 +1,16 @@
+#sidebar {
+    
+   
+    height: 500px;
+    position: fixed;
+    top: 10;
+    left: 0;
+    background-color: #f8f9fa;
+}
+.card{
+    top: 0px;
+    left: 255px;
+    width: 1122px;
+
+}
+

@@ -1,0 +1,45 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th (click)="isImageVisible = !isImageVisible">Image</th>
+        <th>id</th>
+        <th>title</th>
+        <th>desc</th>
+        <th>Price</th>
+        <th>action</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>
+          <img
+            *ngIf="isImageVisible"
+            width="50"
+            [src]= "product.image "
+            alt=""  
+          />
+        </td>
+  
+        <td>{{ product.id }}</td>
+        <td>{{ product.title }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}$</td>
+        <td>
+          <a class="btn btn-warning" [routerLink]="['/admin/products', product.id]"
+              >View</a
+            >
+            <a class="btn btn-warning" 
+              >edit</a
+            >
+            
+         
+          <button
+            class="btn btn-danger"
+            (click)="handleDeleteProduct(product.id)"
+          >
+            Delete
+          </button>
+          
+        </td>
+      </tr>
+    </thead>
+  </table>
+  
